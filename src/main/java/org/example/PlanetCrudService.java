@@ -1,5 +1,7 @@
 package org.example;
-
+//Опиши сутності Client та Planet. Пропиши Hibernate мапінги для цих сутностей (таблиці в БД client та planet відповідно).
+//Напиши CRUD сервіси для обох сутностей - ClientCrudService та PlanetCrudService.
+//Напиши тестовий код, який додаватиме/видалятиме записи за допомогою цих сервісів. Переконайсь, що всі CRUD операції працюють правильно.
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -19,5 +21,12 @@ public class PlanetCrudService {
         return planet;
     }
 
-    
+    public List<Planet> getAllPlanets(){
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<Planet> planets = entityManager.createQuery("SELECT p FROM Planet p", Planet.class).getResultList();
+        entityManager.close();
+        return planets;
+    }
+
+
 }
