@@ -11,3 +11,9 @@ U
 0src/main/java/org/example/ClientCrudService.java,7\1\71b8cf510b04071960c26ec8a4237e15a24a2f68
 `
 0src/main/java/org/example/PlanetCrudService.java,4\f\4ff7d16ccc22fc40abedae5a2291cd143280ae43
+S
+#src/test/java/CrudServiceTests.java,0\0\00e94a731049e0b8f245a1c06a766c2f84714271
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
