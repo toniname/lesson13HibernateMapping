@@ -1,15 +1,12 @@
 package org.example;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import java.util.List;
 
 public class ClientCrudService {
-    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistenceUnit");
+    private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistenceUnit");
 
     public Client createClient(Client client) {
+
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
@@ -45,3 +42,4 @@ public class ClientCrudService {
         entityManager.close();
     }
 }
+
